@@ -20,9 +20,9 @@ public class DefinedGenerator extends JavaPlugin {
 
 
     @Override
-    public void onEnable(){
+    public void onEnable() {
         manager = new dataManager(this);
-        if(!getDataFolder().exists()){
+        if (!getDataFolder().exists()) {
             DefaultGenerators.createDefaultConfig();
             Players.createPlayersJson(this);
             //Create config stuff
@@ -33,6 +33,7 @@ public class DefinedGenerator extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new OnInventoryClick(), this);
         getServer().getPluginManager().registerEvents(new OnGeneratorBreak(), this);
     }
+
     @Override
     public void onDisable(){
         //Save config stuff
